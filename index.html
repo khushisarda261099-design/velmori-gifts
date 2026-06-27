@@ -78,10 +78,10 @@ nav {
   transition: background 0.5s, backdrop-filter 0.5s;
 }
 nav.scrolled {
-  background: rgba(26, 15, 15, 0.7);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  background: rgba(26, 15, 15, 0.75);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
@@ -107,16 +107,27 @@ nav.scrolled {
 .nav-cta {
   display: flex; align-items: center; gap: 8px;
   padding: 10px 22px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.8), rgba(18, 140, 126, 0.8));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
   font-size: 13px;
   font-weight: 700;
-  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 4px 20px rgba(37,211,102,0.2),
+    0 1px 0 0 rgba(255, 255, 255, 0.2) inset;
   transition: all 0.3s;
 }
-.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
+.nav-cta:hover { 
+  transform: translateY(-2px); 
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.95), rgba(18, 140, 126, 0.95));
+  box-shadow: 
+    0 8px 28px rgba(37,211,102,0.35),
+    0 1px 0 0 rgba(255, 255, 255, 0.3) inset; 
+}
 
 /* ══════════════════════════════════════════════
    HERO SCROLL SCENE
@@ -393,36 +404,52 @@ nav.scrolled {
 .btn-wa {
   display: flex; align-items: center; gap: 10px;
   padding: 18px 32px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.8), rgba(18, 140, 126, 0.8));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
   font-size: 15px;
   font-weight: 700;
-  box-shadow: 0 8px 36px rgba(37,211,102,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 8px 36px rgba(37,211,102,0.25),
+    0 1px 0 0 rgba(255, 255, 255, 0.2) inset;
   transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
   letter-spacing: 0.3px;
 }
-.btn-wa:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(37,211,102,0.55); }
+.btn-wa:hover { 
+  transform: translateY(-4px); 
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.95), rgba(18, 140, 126, 0.95));
+  box-shadow: 
+    0 16px 48px rgba(37,211,102,0.4),
+    0 1px 0 0 rgba(255, 255, 255, 0.3) inset; 
+}
 
 .btn-ghost {
   display: flex; align-items: center; gap: 8px;
   padding: 18px 32px;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: rgba(255,255,255,0.9);
   text-decoration: none;
   border-radius: 50px;
   font-size: 15px;
   font-weight: 600;
-  border: 1.5px solid rgba(201,168,76,0.5);
+  border: 1.5px solid rgba(201,168,76,0.35);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset;
   transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
   letter-spacing: 0.3px;
 }
 .btn-ghost:hover {
-  background: rgba(201,168,76,0.15);
+  background: rgba(201,168,76,0.12);
   border-color: var(--gold2);
   transform: translateY(-4px);
+  box-shadow: 
+    0 12px 32px rgba(201, 168, 76, 0.15),
+    0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
 }
 
 /* Scroll hint */
@@ -479,7 +506,6 @@ nav.scrolled {
   padding: 14px 0;
   overflow: hidden;
   z-index: 20;
-  border-top: 1px solid rgba(201,168,76,0.12);
   opacity: 0;
   transform: translateY(100%);
   transition: opacity 0.6s, transform 0.6s;
@@ -553,18 +579,22 @@ nav.scrolled {
 .product-card {
   border-radius: 28px;
   overflow: hidden;
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255,255,255,0.6);
-  box-shadow: 0 8px 40px rgba(181,96,112,0.07);
-  transition: all 0.6s cubic-bezier(0.16,1,0.3,1);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(25px) saturate(190%);
+  -webkit-backdrop-filter: blur(25px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 10px 30px -10px rgba(61, 43, 43, 0.1),
+    0 1px 1px 0 rgba(255, 255, 255, 0.8) inset;
+  transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
 }
 .product-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  background: rgba(255,255,255,0.85);
-  border-color: rgba(201,168,76,0.35);
-  box-shadow: 0 32px 72px rgba(181,96,112,0.16);
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(201, 168, 76, 0.5);
+  box-shadow: 
+    0 30px 60px -15px rgba(61, 43, 43, 0.2),
+    0 1px 1px 0 rgba(255, 255, 255, 0.9) inset;
 }
 .product-card-img {
   width: 100%;
@@ -613,18 +643,25 @@ nav.scrolled {
   gap: 24px;
 }
 .testi-card {
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(201,168,76,0.15);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(30px) saturate(120%);
+  -webkit-backdrop-filter: blur(30px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 32px;
   position: relative;
-  transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.2),
+    0 1px 0 0 rgba(255, 255, 255, 0.05) inset;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .testi-card:hover {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(201,168,76,0.3);
-  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(201, 168, 76, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.3),
+    0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
 }
 .testi-card::before {
   content: '\201C';
@@ -709,25 +746,40 @@ nav.scrolled {
   justify-content: center;
   margin-bottom: 48px;
   padding: 28px 36px;
-  background: rgba(255,255,255,0.04);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(201,168,76,0.15);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(30px) saturate(120%);
+  -webkit-backdrop-filter: blur(30px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
-  transition: all 0.4s;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.2),
+    0 1px 0 0 rgba(255, 255, 255, 0.05) inset;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.cta-founder:hover { border-color: rgba(201,168,76,0.3); background: rgba(255,255,255,0.07); }
+.cta-founder:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(201, 168, 76, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.3),
+    0 1px 0 0 rgba(255, 255, 255, 0.1) inset;
+}
 .cta-avatar {
   width: 72px; height: 72px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--rose2), var(--rose));
-  border: 2.5px solid rgba(201,168,76,0.4);
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 26px;
-  color: #fff;
-  font-weight: 600;
-  box-shadow: 0 8px 24px rgba(181,96,112,0.35);
+  border: 2px solid rgba(201, 168, 76, 0.5);
+  background: #FFF9F6;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cta-avatar img {
+  width: 106%;
+  height: 106%;
+  object-fit: cover;
 }
 .cta-founder-info { text-align: left; }
 .cta-founder-name {
@@ -751,19 +803,30 @@ nav.scrolled {
   justify-content: center;
   gap: 12px;
   padding: 22px 52px;
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.8), rgba(18, 140, 126, 0.8));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
   font-size: 17px;
   font-weight: 700;
-  box-shadow: 0 12px 48px rgba(37,211,102,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 
+    0 12px 48px rgba(37,211,102,0.3),
+    0 1px 0 0 rgba(255, 255, 255, 0.2) inset;
   transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
   letter-spacing: 0.3px;
   width: 100%;
   max-width: 400px;
 }
-.btn-wa-big:hover { transform: translateY(-5px); box-shadow: 0 24px 64px rgba(37,211,102,0.55); }
+.btn-wa-big:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.95), rgba(18, 140, 126, 0.95));
+  box-shadow: 
+    0 24px 64px rgba(37,211,102,0.45),
+    0 1px 0 0 rgba(255, 255, 255, 0.3) inset;
+}
 
 /* ── FOOTER ── */
 footer {
@@ -998,7 +1061,9 @@ footer {
       <p class="cta-sub reveal">Reach out on WhatsApp to discuss your order, customise a hamper, or ask about pricing. Every gift is personally curated by Ruchita.</p>
 
       <div class="cta-founder reveal">
-        <div class="cta-avatar">RT</div>
+        <div class="cta-avatar">
+          <img src="images/logo.png" alt="Velmori Gifts Logo">
+        </div>
         <div class="cta-founder-info">
           <p class="cta-founder-name">Ruchita Tawade</p>
           <p class="cta-founder-role">Founder · Velmori Gifts</p>
